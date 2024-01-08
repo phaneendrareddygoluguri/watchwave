@@ -1,8 +1,0 @@
-{
-  "projects": {
-    "default": "movie-tailer",
-    "movie-trailer": "movie-tailer"
-  },
-  "targets": {},
-  "etags": {}
-}
