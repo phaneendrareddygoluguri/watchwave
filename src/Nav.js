@@ -40,7 +40,7 @@ function Nav() {
       <img
         className={`nav_logo ${show && "nav_black"}`}
         src="src\assets\watchwave.png"
-        alt="Watch Wave"
+        alt="Watch-Wave"
         style={{ borderRadius: "100px" }}
       />
       <img
