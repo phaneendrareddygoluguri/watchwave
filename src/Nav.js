@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import Search from "./SearchBox/index";
-import Logo from "./assets/watchwavelogo.png";
 import User from "./assets/watchwave.png";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
+import Avatar from "@mui/material/Avatar";
 
 function Nav() {
   //  const [show,handleShow] = useState(false)
@@ -32,11 +32,7 @@ function Nav() {
         handleShow(false);
       }
     };
-
-    // Add the event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Remove the event listener in the cleanup function
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -53,17 +49,9 @@ function Nav() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            {/* <div className={`nav ${show && "nav_black"}`}> */}
-            <img
-              // className={`nav_logo ${show && "nav_black"}`}
-              src={Logo}
-              alt="Watch-Wave"
-              style={{ borderRadius: "100px", height: "50px", width: "50px" }}
-            />
-            {/* </div> */}
+            <Avatar alt="Logo" src={User} />
           </IconButton>
           <Search />
-          <img className="nav_avatar" src={User} alt="" />
         </Toolbar>
       </AppBar>
     </Box>

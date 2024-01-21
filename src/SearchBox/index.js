@@ -1,17 +1,16 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import { WidthFull } from "@mui/icons-material";
+import MicIcon from "@mui/icons-material/Mic";
+import IconButton from "@mui/material/IconButton";
 
 const AutocompleteComponent = () => {
-  const options = ["Option 1", "Option 2", "Option 3"];
-
   return (
     <>
       <Autocomplete
         freeSolo
-        style={{ Width: "100px" }}
-        options={options}
+        style={{ marginLeft: "50px", width: "400px" }}
+        options={[]}
         renderInput={(params) => (
           <TextField
             {...params}
@@ -21,6 +20,9 @@ const AutocompleteComponent = () => {
           />
         )}
       />
+      <IconButton color="secondary" aria-label="add an alarm">
+        <MicIcon />
+      </IconButton>
     </>
   );
 };
